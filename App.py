@@ -1,7 +1,6 @@
-import streamlit as st
-st.title("IA PYRAMIDE KORHOGO")
-m = st.selectbox("matieres",["maths","francais","histoire","physique-chimie"])
-t = st.text_area("exercice")
-p = st.file_uploader("photo", type=["jpg","png","jpeg"])
-if p: st.image(p)
-if st.button("corriger"): st.success(f"correction {m} bien recu !")
+import streamlit as st,google.generativeai as g
+k=st.sidebar.text_input("API", type="password")
+if q:=st.chat_input("Question"): g.configure(api_key=k); st.write(g.GenerativeModel("gemini-1.5-flash").generate_content(q).text)
+                                                                  
+                                                                  
+                                                                
