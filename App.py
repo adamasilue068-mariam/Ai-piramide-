@@ -1,11 +1,9 @@
 import streamlit as st
 st.title("IA PYRAMIDE KORHOGO")
-st.write("l'intelligence de korhogo")
-m=st.selectbox("matière",["Maths", français, anglais])
-e=st.text_area("Ton exercice :")
-if e=="":boutton
-  st.warning("Ecris d'abord !")
-else:boutton
-  st.success("correction Ok pour"+m)
-  st.write("méthode: 1-comprendre 2-formule 3- vérifier")
-  st.balloons()
+mat=st.selecbox("Matiere",["maths","français","anglais"])
+exo = st.text_area("Ton exercice :")
+if st.button("corriger"):
+  if exo == "":
+    st.warning("Ecris d'abord !")
+  else:
+    st.success("Ok pour "+mat)
